@@ -23,6 +23,3 @@ In the service industry, **trust is everything**. This landing page isn't just a
 1. **Clone it:** `git clone https://github.com/YOUR_USERNAME/appliance-repair-landing.git`
 2. **Open it:** Just double-click `index.html` and you're good to go!
 3. **Customize it:** Feel free to change the colors or services to match any brand.
-
----
-*Created with focus on quality and performance by [Yevheniia Vovk].*
