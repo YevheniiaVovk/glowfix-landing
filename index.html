@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlowFix | Premium Appliance Repair Service</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-header { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+        .gradient-text { background: linear-gradient(90deg, #1d4ed8, #ea580c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .error-input { border-color: #ef4444 !important; background-color: #fef2f2; }
+        .error-msg { color: #ef4444; font-size: 0.75rem; margin-top: 0.25rem; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-white text-slate-900 antialiased">
+
+    <header class="fixed w-full z-50 glass-header">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-extrabold tracking-tighter">
+                <span class="text-blue-600">GLOW</span>FIX
+            </div>
+            <nav class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-slate-500">
+                <a href="#services" class="hover:text-blue-600 transition">Services</a>
+                <a href="#booking" class="hover:text-blue-600 transition">Book Now</a>
+                <a href="tel:+18005550199" class="text-slate-900">1-800-555-0199</a>
+            </nav>
+            <a href="#booking" class="bg-blue-600 text-white px-5 py-2 rounded-full font-bold text-xs hover:shadow-lg hover:shadow-blue-200 transition">
+                Get Quote
+            </a>
+        </div>
+    </header>
+
+    <section class="pt-32 pb-16 bg-slate-50">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">
+                Modern Repair for <br><span class="gradient-text">Modern Homes.</span>
+            </h1>
+            <p class="text-slate-500 text-lg max-w-2xl mx-auto mb-10">
+                Authorized same-day service for premium home appliances. We bring your tech back to life with 90-day warranty.
+            </p>
+        </div>
+    </section>
+
+    <section id="services" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-8 rounded-[32px] bg-white border border-slate-100 shadow-sm hover:shadow-xl transition duration-500">
+                    <div class="text-4xl mb-4">❄️</div>
+                    <h3 class="font-bold text-lg mb-2">Refrigerators</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Fixing compressors, leaks, and smart cooling systems.</p>
+                </div>
+                <div class="p-8 rounded-[32px] bg-white border border-slate-100 shadow-sm hover:shadow-xl transition duration-500">
+                    <div class="text-4xl mb-4">🧺</div>
+                    <h3 class="font-bold text-lg mb-2">Washers</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Handling drum issues, drainage, and electronics.</p>
+                </div>
+                <div class="p-8 rounded-[32px] bg-white border border-slate-100 shadow-sm hover:shadow-xl transition duration-500">
+                    <div class="text-4xl mb-4">🔥</div>
+                    <h3 class="font-bold text-lg mb-2">Ranges & Ovens</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Professional repair for gas and electric cooking units.</p>
+                </div>
+                <div class="p-8 rounded-[32px] bg-white border border-slate-100 shadow-sm hover:shadow-xl transition duration-500">
+                    <div class="text-4xl mb-4">🍽️</div>
+                    <h3 class="font-bold text-lg mb-2">Dishwashers</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Solving leaking, noise, and cleaning performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="bg-white rounded-[40px] shadow-2xl overflow-hidden flex flex-col md:flex-row border border-slate-200">
+                <div class="md:w-2/5 bg-blue-600 p-12 text-white flex flex-col justify-center">
+                    <h2 class="text-3xl font-extrabold mb-4 italic">Quick Quote.</h2>
+                    <p class="text-blue-100 text-sm leading-relaxed mb-6">Enter your details and our manager will call you back within 15 minutes to schedule a visit.</p>
+                    <div class="space-y-4 text-xs font-bold uppercase tracking-widest">
+                        <p>✓ Licensed Techs</p>
+                        <p>✓ Original Parts</p>
+                        <p>✓ Same-Day Fix</p>
+                    </div>
+                </div>
+                <div class="md:w-3/5 p-12">
+                    <form id="mainForm" novalidate class="space-y-5">
+                        <div>
+                            <label class="block text-[10px] font-black uppercase text-slate-400 mb-1 tracking-widest">Full Name</label>
+                            <input type="text" id="userName" class="w-full bg-slate-50 border border-slate-200 p-4 rounded-2xl outline-none focus:border-blue-600 transition" placeholder="John Doe">
+                            <p id="nameError" class="error-msg hidden">Please enter your name</p>
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-black uppercase text-slate-400 mb-1 tracking-widest">Phone Number</label>
+                            <input type="tel" id="userPhone" class="w-full bg-slate-50 border border-slate-200 p-4 rounded-2xl outline-none focus:border-blue-600 transition" placeholder="(555) 000-0000">
+                            <p id="phoneError" class="error-msg hidden">Valid US phone is required</p>
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-black uppercase text-slate-400 mb-1 tracking-widest">Problem Description</label>
+                            <textarea id="userIssue" rows="3" class="w-full bg-slate-50 border border-slate-200 p-4 rounded-2xl outline-none focus:border-blue-600 transition" placeholder="My fridge stopped cooling..."></textarea>
+                            <p id="issueError" class="error-msg hidden">Briefly describe the problem</p>
+                        </div>
+                        <button type="submit" class="w-full bg-slate-900 text-white font-extrabold py-5 rounded-2xl hover:bg-blue-600 transition duration-300 shadow-xl">
+                            Request Repair
+                        </button>
+                    </form>
+                    <div id="successMsg" class="mt-4 p-4 bg-green-50 text-green-700 rounded-2xl font-bold text-center hidden">
+                        Success! We're on it.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white pt-20 pb-10 border-t border-slate-100">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="text-2xl font-extrabold mb-6">GLOWFIX</div>
+                    <p class="text-slate-500 max-w-sm leading-relaxed">
+                        The leading appliance repair network in the US. Professional service, certified parts, and guaranteed satisfaction.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 uppercase text-[10px] tracking-[0.2em] text-slate-400">Navigation</h4>
+                    <ul class="space-y-4 text-sm font-semibold text-slate-600">
+                        <li><a href="#services" class="hover:text-blue-600 transition">Our Services</a></li>
+                        <li><a href="#booking" class="hover:text-blue-600 transition">Book Online</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 uppercase text-[10px] tracking-[0.2em] text-slate-400">Contact</h4>
+                    <ul class="space-y-4 text-sm font-semibold text-slate-600">
+                        <li>1-800-555-0199</li>
+                        <li>support@glowfix.pro</li>
+                        <li>NYC, United States</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                <p>&copy; 2026 GLOWFIX APPLIANCE CARE. ALL RIGHTS RESERVED.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-slate-900">Privacy Policy</a>
+                    <a href="#" class="hover:text-slate-900">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const form = document.getElementById('mainForm');
+        const phoneInput = document.getElementById('userPhone');
+
+        // Маска телефону
+        phoneInput.addEventListener('input', (e) => {
+            let x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+            e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+        });
+
+        // Валідація
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let isValid = true;
+
+            const fields = [
+                { id: 'userName', errorId: 'nameError', min: 2 },
+                { id: 'userPhone', errorId: 'phoneError', regex: /^\(\d{3}\)\s\d{3}-\d{4}$/ },
+                { id: 'userIssue', errorId: 'issueError', min: 5 }
+            ];
+
+            fields.forEach(field => {
+                const el = document.getElementById(field.id);
+                const err = document.getElementById(field.errorId);
+                let fieldValid = true;
+
+                if (field.min && el.value.trim().length < field.min) fieldValid = false;
+                if (field.regex && !field.regex.test(el.value)) fieldValid = false;
+
+                if (!fieldValid) {
+                    el.classList.add('error-input');
+                    err.classList.remove('hidden');
+                    isValid = false;
+                } else {
+                    el.classList.remove('error-input');
+                    err.classList.add('hidden');
+                }
+            });
+
+            if (isValid) {
+                document.getElementById('successMsg').classList.remove('hidden');
+                form.reset();
+                setTimeout(() => document.getElementById('successMsg').classList.add('hidden'), 5000);
+            }
+        });
+    </script>
+</body>
+</html>
